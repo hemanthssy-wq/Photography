@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Through the Lens — Photography Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── VIEWFINDER OVERLAY ─────────────────────────────────── -->
+  <div id="viewfinder-overlay" aria-hidden="true">
+    <div class="vf-body">
+
+      <!-- Camera top deck -->
+      <div class="vf-top-deck">
+        <div class="vf-brand">PENTAX</div>
+        <div class="vf-hotshoe"></div>
+        <div class="vf-rewind-knob"></div>
+      </div>
+
+      <!-- Camera main body with lens + viewfinder -->
+      <div class="vf-camera-body">
+
+        <!-- Lens assembly -->
+        <div class="vf-lens-wrap">
+          <div class="vf-lens-outer">
+            <div class="vf-lens-ring ring-1"></div>
+            <div class="vf-lens-ring ring-2"></div>
+            <div class="vf-lens-inner">
+              <div class="vf-aperture">
+                <div class="vf-aperture-iris" id="iris">
+                  <div class="blade b1"></div>
+                  <div class="blade b2"></div>
+                  <div class="blade b3"></div>
+                  <div class="blade b4"></div>
+                  <div class="blade b5"></div>
+                  <div class="blade b6"></div>
+                  <div class="blade b7"></div>
+                  <div class="blade b8"></div>
+                  <!-- peek window fills from behind -->
+                  <div class="vf-peek-circle" id="peekCircle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side: viewfinder eyepiece -->
+        <div class="vf-right-panel">
+          <div class="vf-finder-eyepiece">
+            <div class="vf-finder-glass">
+              <span class="vf-finder-label">VF</span>
+            </div>
+          </div>
+          <div class="vf-shutter-btn" id="shutterBtn" role="button" tabindex="0" aria-label="Open portfolio">
+            <div class="vf-shutter-inner"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Camera bottom strip -->
+      <div class="vf-bottom-strip">
+        <div class="vf-model-text">K1000 · SLR · 35mm</div>
+        <div class="vf-advance-lever"></div>
+      </div>
+
+    </div>
+
+    <!-- Instruction -->
+    <p class="vf-hint" id="vfHint">Click the shutter to open</p>
+  </div>
+  <!-- ── / VIEWFINDER OVERLAY ───────────────────────────────── -->
+
+
+  <!-- ── MAIN CONTENT ──────────────────────────────────────── -->
+  <main id="mainContent" class="hidden">
+
+    <!-- NAV -->
+    <nav class="site-nav" id="siteNav">
+      <div class="nav-logo">
+        <span class="nav-logo-icon">⬡</span>
+        <span class="nav-logo-text">Through the Lens</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#landscapes">Landscapes</a></li>
+        <li><a href="#portraits">Portraits</a></li>
+        <li><a href="#silhouettes">Silhouettes</a></li>
+        <li><a href="#grad">Grad</a></li>
+        <li><a href="#macro">Macro</a></li>
+        <li><a href="#contact" class="nav-cta">Connect</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-text" aria-hidden="true">PHOTOGRAPHY</div>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal-up" style="--d:0.1s">Portfolio · 2024</p>
+        <h1 class="hero-headline reveal-up" style="--d:0.25s">
+          Where passion<br/>
+          <em>meets</em> creativity.
+        </h1>
+        <p class="hero-sub reveal-up" style="--d:0.4s">
+          Every frame is a heartbeat — a fleeting second of light, shadow,<br class="br-lg"/>
+          and emotion captured forever through the lens.
+        </p>
+        <a href="#landscapes" class="hero-cta reveal-up" style="--d:0.55s">
+          Explore the gallery
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- INTRO MARQUEE -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Landscapes</span><span>·</span>
+        <span>Portraits</span><span>·</span>
+        <span>Silhouettes</span><span>·</span>
+        <span>Grad Photography</span><span>·</span>
+        <span>Macro</span><span>·</span>
+        <span>Landscapes</span><span>·</span>
+        <span>Portraits</span><span>·</span>
+        <span>Silhouettes</span><span>·</span>
+        <span>Grad Photography</span><span>·</span>
+        <span>Macro</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- STATEMENT -->
+    <section class="statement-section">
+      <div class="statement-inner">
+        <p class="statement-text reveal-up">
+          Photography is the art of frozen time —<br/>
+          the ability to store emotion and raw beauty<br/>
+          in a single instant that lasts forever.
+        </p>
+        <span class="statement-author reveal-up" style="--d:0.2s">— Charlotte Cain</span>
+      </div>
+    </section>
+
+    <!-- ── GALLERY SECTIONS ──────────────────────────────── -->
+
+    <!-- LANDSCAPES -->
+    <section class="gallery-section" id="landscapes">
+      <div class="section-header reveal-up">
+        <span class="section-tag">01</span>
+        <h2 class="section-title">Landscapes</h2>
+        <p class="section-desc">
+          From mountain ridgelines to coastal twilight — nature at its most majestic.
+        </p>
+      </div>
+      <div class="card-grid">
+        <div class="photo-card card-tall reveal-card" style="--d:0.05s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Mountain</span>
+            <h3>Alpine Solitude</h3>
+          </div>
+        </div>
+        <div class="card-col">
+          <div class="photo-card reveal-card" style="--d:0.12s">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80')"></div>
+            <div class="card-overlay">
+              <span class="card-tag">Forest</span>
+              <h3>Morning Mist</h3>
+            </div>
+          </div>
+          <div class="photo-card reveal-card" style="--d:0.2s">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80')"></div>
+            <div class="card-overlay">
+              <span class="card-tag">Waterfall</span>
+              <h3>Cascade Light</h3>
+            </div>
+          </div>
+        </div>
+        <div class="photo-card card-wide reveal-card" style="--d:0.28s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Desert</span>
+            <h3>Red Horizon</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTRAITS -->
+    <section class="gallery-section section-dark" id="portraits">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02</span>
+        <h2 class="section-title">Portraits</h2>
+        <p class="section-desc">
+          The quiet power of human connection — each face telling its own story.
+        </p>
+      </div>
+      <div class="card-grid card-grid--portraits">
+        <div class="photo-card reveal-card" style="--d:0.05s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Natural Light</span>
+            <h3>Golden Hour</h3>
+          </div>
+        </div>
+        <div class="photo-card card-tall reveal-card" style="--d:0.12s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Studio</span>
+            <h3>Inner Depth</h3>
+          </div>
+        </div>
+        <div class="photo-card reveal-card" style="--d:0.2s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Candid</span>
+            <h3>Unguarded</h3>
+          </div>
+        </div>
+        <div class="photo-card reveal-card" style="--d:0.28s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1552058544-f2b08422138a?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">B&amp;W</span>
+            <h3>Timeless</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SILHOUETTES -->
+    <section class="gallery-section" id="silhouettes">
+      <div class="section-header reveal-up">
+        <span class="section-tag">03</span>
+        <h2 class="section-title">Silhouettes</h2>
+        <p class="section-desc">
+          When shadows speak louder than detail — form, light, and drama in perfect contrast.
+        </p>
+      </div>
+      <div class="silhouette-grid">
+        <div class="photo-card reveal-card" style="--d:0.05s">
+          <div class="card-img sil-tint" style="background-image: url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Sunset</span>
+            <h3>Silhouette at Dusk</h3>
+          </div>
+        </div>
+        <div class="photo-card card-tall reveal-card" style="--d:0.15s">
+          <div class="card-img sil-tint" style="background-image: url('https://images.unsplash.com/photo-1542261777448-23d2a9e529de?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Urban</span>
+            <h3>City Shadows</h3>
+          </div>
+        </div>
+        <div class="photo-card reveal-card" style="--d:0.25s">
+          <div class="card-img sil-tint" style="background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Sunrise</span>
+            <h3>Dawn Silhouette</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAD PHOTOGRAPHY -->
+    <section class="gallery-section section-dark" id="grad">
+      <div class="section-header reveal-up">
+        <span class="section-tag">04</span>
+        <h2 class="section-title">Grad Photography</h2>
+        <p class="section-desc">
+          Celebrating milestones — joy, pride, and new beginnings through the lens.
+        </p>
+      </div>
+      <div class="card-grid card-grid--grad">
+        <div class="photo-card card-tall reveal-card" style="--d:0.05s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Ceremony</span>
+            <h3>Cap &amp; Gown</h3>
+          </div>
+        </div>
+        <div class="card-col">
+          <div class="photo-card reveal-card" style="--d:0.15s">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1627556704302-624286467c65?w=800&q=80')"></div>
+            <div class="card-overlay">
+              <span class="card-tag">Candid</span>
+              <h3>Pure Joy</h3>
+            </div>
+          </div>
+          <div class="photo-card reveal-card" style="--d:0.25s">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80')"></div>
+            <div class="card-overlay">
+              <span class="card-tag">Family</span>
+              <h3>Together</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACRO PHOTOGRAPHY -->
+    <section class="gallery-section" id="macro">
+      <div class="section-header reveal-up">
+        <span class="section-tag">05</span>
+        <h2 class="section-title">Macro Photography</h2>
+        <p class="section-desc">
+          The hidden universe in miniature — textures, details, and tiny worlds revealed.
+        </p>
+      </div>
+      <div class="macro-grid">
+        <div class="photo-card reveal-card" style="--d:0.05s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Flora</span>
+            <h3>Petal Geometry</h3>
+          </div>
+        </div>
+        <div class="photo-card reveal-card" style="--d:0.12s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1530982011887-3cc11cc85693?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Insect</span>
+            <h3>Compound Eye</h3>
+          </div>
+        </div>
+        <div class="photo-card card-tall reveal-card" style="--d:0.2s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Water</span>
+            <h3>Droplet World</h3>
+          </div>
+        </div>
+        <div class="photo-card reveal-card" style="--d:0.28s">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88df5691cc31?w=800&q=80')"></div>
+          <div class="card-overlay">
+            <span class="card-tag">Texture</span>
+            <h3>Hidden Pattern</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <p class="contact-eyebrow reveal-up">Let's create together</p>
+        <h2 class="contact-headline reveal-up" style="--d:0.1s">
+          Have a project in mind?
+        </h2>
+        <a href="mailto:hello@throughlens.com" class="contact-email reveal-up" style="--d:0.2s">
+          hello@throughlens.com
+        </a>
+        <div class="contact-socials reveal-up" style="--d:0.3s">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Behance">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.5 11.25c.69 0 1.25-.56 1.25-1.25S8.19 8.75 7.5 8.75H5v2.5h2.5zM7.75 15.25c.83 0 1.5-.67 1.5-1.5S8.58 12.25 7.75 12.25H5v3h2.75z"/>
+              <path d="M3 7h6.5c1.38 0 2.5 1.12 2.5 2.5 0 .97-.55 1.8-1.35 2.23.97.38 1.6 1.34 1.6 2.4C12.25 15.71 11.14 17 9.5 17H3V7zM15.5 8.75h4v-.75h-4v.75zM15.25 13.5c.14.84.9 1.5 1.75 1.5.58 0 1.09-.25 1.39-.67h1.36C19.33 15.5 18.12 16.25 17 16.25c-1.79 0-3.25-1.46-3.25-3.25S15.21 9.75 17 9.75c1.79 0 3.25 1.46 3.25 3.25v.5h-5zm3.5-1c-.18-.77-.88-1.25-1.75-1.25s-1.57.48-1.75 1.25h3.5z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="500px">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-11H9v2h2v4h2v-4h2v-2h-2V7h-2v2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <span>© 2024 Through the Lens · All rights reserved</span>
+        <span>Made with ♥ &amp; a Pentax K1000</span>
+      </footer>
+    </section>
+
+  </main>
+  <!-- ── / MAIN CONTENT ───────────────────────────────────── -->
+
+  <script src="script.js"></script>
+</body>
+</html>
