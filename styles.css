@@ -1,4 +1,106 @@
-/* =====================================================
+<section class="gallery-section section-dark" id="portraits">
+  <div class="section-header reveal-up">
+    <span class="section-tag">02</span>
+    <h2 class="section-title">Portraits</h2>
+    <p class="section-desc">
+      The quiet power of human connection — each face telling its own story.
+    </p>
+  </div>
+  <div class="card-grid card-grid--portraits">
+    <div class="photo-card reveal-card" style="--d:0.05s">
+      <div class="card-img" style="background-image: url('images/portraits/portrait1.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">Natural Light</span>
+        <h3>Golden Hour</h3>
+      </div>
+    </div>
+    <div class="photo-card card-tall reveal-card" style="--d:0.12s">
+      <div class="card-img" style="background-image: url('images/portraits/portrait2.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">Studio</span>
+        <h3>Inner Depth</h3>
+      </div>
+    </div>
+    <div class="photo-card reveal-card" style="--d:0.2s">
+      <div class="card-img" style="background-image: url('images/portraits/portrait3.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">Candid</span>
+        <h3>Unguarded</h3>
+      </div>
+    </div>
+  </div>
+</section><section class="gallery-section" id="landscapes">
+  <div class="section-header reveal-up">
+    <span class="section-tag">01</span>
+    <h2 class="section-title">Landscapes</h2>
+    <p class="section-desc">
+      From mountain ridgelines to coastal twilight — nature at its most majestic.
+    </p>
+  </div>
+  <div class="card-grid">
+    <div class="photo-card card-tall reveal-card" style="--d:0.05s">
+      <div class="card-img" style="background-image: url('images/landscapes_nature/ECB21CC0-E8E0-4C.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">Mountain</span>
+        <h3>Alpine Solitude</h3>
+      </div>
+    </div>
+    <div class="card-col">
+      <div class="photo-card reveal-card" style="--d:0.12s">
+        <div class="card-img" style="background-image: url('images/landscapes_nature/0E3E7B59-1AD2-4223-8.jpeg')"></div>
+        <div class="card-overlay">
+          <span class="card-tag">Forest</span>
+          <h3>Morning Mist</h3>
+        </div>
+      </div>
+      <div class="photo-card reveal-card" style="--d:0.2s">
+        <div class="card-img" style="background-image: url('images/landscapes_nature/0F4D7BB9-BF64-4.jpeg')"></div>
+        <div class="card-overlay">
+          <span class="card-tag">Waterfall</span>
+          <h3>Cascade Light</h3>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card card-wide reveal-card" style="--d:0.28s">
+      <div class="card-img" style="background-image: url('images/landscapes_nature/4C9EF537-E6B8-4.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">Desert</span>
+        <h3>Red Horizon</h3>
+      </div>
+    </div>
+  </div>
+</section><section class="gallery-section" id="street">
+  <div class="section-header reveal-up">
+    <span class="section-tag">03</span>
+    <h2 class="section-title">Street</h2>
+    <p class="section-desc">
+      The vibrant energy of urban life captured in motion.
+    </p>
+  </div>
+  <div class="card-grid">
+    <div class="photo-card reveal-card" style="--d:0.05s">
+      <div class="card-img" style="background-image: url('images/street/street1.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">City Lights</span>
+        <h3>Urban Glow</h3>
+      </div>
+    </div>
+    <div class="photo-card reveal-card" style="--d:0.12s">
+      <div class="card-img" style="background-image: url('images/street/street2.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">Nightlife</span>
+        <h3>Neon Dreams</h3>
+      </div>
+    </div>
+    <div class="photo-card reveal-card" style="--d:0.2s">
+      <div class="card-img" style="background-image: url('images/street/street3.jpeg')"></div>
+      <div class="card-overlay">
+        <span class="card-tag">Candid</span>
+        <h3>City Stroll</h3>
+      </div>
+    </div>
+  </div>
+</section>/* =====================================================
    Through the Lens — Photography Portfolio
    styles.css
    ===================================================== */
